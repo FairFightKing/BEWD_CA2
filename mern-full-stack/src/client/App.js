@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter, Route } from 'react-router-dom';
-//import required components
+// import required components
 import CreateDog from './CreateDog';
 import EditDog from './EditDog';
 import DogList from './DogList';
@@ -10,11 +10,11 @@ const App = () => {
   return(
     <HashRouter>
       <div>
-        {/*SERVERSIDE: Link the routes to components*/}
+        {/* SERVERSIDE: Link the routes to components*/}
         <Route exact path="/" component={DogList}/>
-        {/*pass the id through the EditDog component*/}
+        {/* pass the id through the EditDog component*/}
         <Route path="/edit-dog/:id" component={EditDog}/>
-        {/*set the path to create a new user to CreateDog component*/}
+        {/* set the path to create a new user to CreateDog component*/}
         <Route path="/create-dog" component={CreateDog}/>
       </div>
     </HashRouter>

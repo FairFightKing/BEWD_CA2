@@ -11,7 +11,7 @@ const dbname = 'DogDB';
 server.use(express.static('dist'));
 
 // the URL to the DB will be loaded from an env variable or using the MongoDB Clour
-const dbroute = process.env.MONGODB_URL || 'mongodb+srv://FFKing:CD2CK55yScXVzij@cluster0.vypn2.mongodb.net/CardsDB?retryWrites=true&w=majority';
+const dbroute = process.env.MONGODB_URL || 'mongodb+srv://FFKing:CD2CK55yScXVzij@cluster0.vypn2.mongodb.net/DogDB?retryWrites=true&w=majority';
 
 let db;
 
