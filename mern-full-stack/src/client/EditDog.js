@@ -95,7 +95,7 @@ class EditDog extends Component {
                 <div className="field">
                   <label className="label"> neuter: </label>
                   <div className="control">
-                    <input className="input is-small" type="booleam" name="neuter" value={this.state.neuter} onChange={this.handleChange} id="form" />
+                    <input className="input is-small" type="boolean" name="neuter" value={this.state.neuter} onChange={this.handleChange} id="form" />
                   </div>
                 </div>
               </div>
