@@ -20,17 +20,17 @@ class DogList extends Component {
 
     // this binding is necessary to make `this` work in the callback
     //  generally, if you refer to a method without () after it, such as onClick={this.handleClick}, you should bind that method
-    this.updateUsers = this.updateUsers.bind(this);
+    this.updateDogs = this.updateDogs.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
   }
 
   // fetch all user data from the server when the component mounts
   componentDidMount() {
-    this.updateUsers();
+    this.updateDogs();
   }
 
   //
-  updateUsers() {
+  updateDogs() {
     // get the users API using axios GET request to the server 
     axios.get('api/dogs')
       .then(response => {
@@ -52,7 +52,7 @@ class DogList extends Component {
       })
       .then(response => {
         // if the deletion was successful then re-render the list of users
-        this.updateUsers();
+        this.updateDogs();
       })
       .catch(error => {
         console.log(error);
@@ -61,7 +61,7 @@ class DogList extends Component {
 
   render() {
     // produce a Dog component for each user object
-    const userList = this.state.dogs.map(d => (
+    const dogList = this.state.dogs.map(d => (
       // map through each element in the array and set to the value received from the server
       <Dog
         key={d._id}
