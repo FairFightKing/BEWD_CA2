@@ -72,7 +72,7 @@ class CreateDog extends Component {
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label"> Neuter: </label>
+                  <label className="label"> Neuter : (true or false) </label>
                   <div className="control">
                     <input className="input is-small" type="text" name="neuter" value={this.state.neuter} onChange={this.handleChange} id="form"/>
                   </div>
