@@ -62,7 +62,7 @@ server.delete('/api/dogs', (req, res) => {
 
 // create new user based on info supplied in request body
 server.post('/api/dogs', (req, res) => {
-  req.body.neuter = Boolean(req.body.neuter);
+  req.body.neuter = req.body.neuter === 'true';
   req.body.age = Number(req.body.age);
   db.collection('Dogs').insertOne(req.body, (err, result) => {
     if (err) throw err;
@@ -79,7 +79,7 @@ server.put('/api/dogs', (req, res) => {
   // remove the ID so as not to overwrite it when updating
   delete req.body._id;
   // find a user matching this ID and update their details
-  req.body.neuter = Boolean(req.body.neuter);
+  req.body.neuter = req.body.neuter === 'true';
   req.body.age = Number(req.body.age);
   db.collection('Dogs').updateOne( {_id: new ObjectID(id) }, {$set: req.body}, (err, result) => {
     if (err) throw err;

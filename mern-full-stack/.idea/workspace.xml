@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c251e6e3-bf69-4c3d-850f-6fd0880e082a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Dog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Dog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/EditDog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/EditDog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +42,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608401918346</updated>
-      <workItem from="1608401919484" duration="7879000" />
+      <workItem from="1608401919484" duration="10353000" />
     </task>
     <servers />
   </component>

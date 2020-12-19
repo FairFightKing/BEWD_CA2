@@ -15,7 +15,7 @@ class Dog extends React.Component {
                 <p className="title is-4 has-text-primary">{this.props.name}</p>
                 <hr/>
                 <p className="subtitle is-size-6">{this.props.gender}</p><hr/>
-                <p className="subtitle is-size-6">{this.props.neuter}</p><hr/>
+                <p className="subtitle is-size-6">{this.props.neuter ? 'True' : 'False'}</p><hr/>
                 <p className="subtitle is-size-6">{this.props.age}</p><hr/>
                 <p className="subtitle is-size-6">{this.props.race}</p>
                 {/* delete the prop with requested id from the function invoked in the parent component*/}
