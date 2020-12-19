@@ -5,18 +5,18 @@ import { Link } from 'react-router-dom';
 // Use "npm install axios" command to install
 import axios from 'axios';
 
-//Edit User component that will edit the clicked on user with passed id
-class EditUser extends Component {
+//Edit Dog component that will edit the clicked on user with passed id
+class EditDog extends Component {
     constructor(props) {
         super(props);
         // store the related to the user information into the state
         // these should match the user object from the API
         this.state = {
-            title: '',
-            first: '',
-            lastName: '',
-            quote: '',
-            picture: ''
+            name: '',
+            gender: '',
+            neuter: '',
+            age: '',
+            race: ''
         };
 
         //this binding is necessary to make `this` work in the callback
@@ -33,11 +33,11 @@ class EditUser extends Component {
                 //on resonse set the state values to match empty state values set in the constructor
                 this.setState({
                     _id: response.data._id,
-                    title: response.data.title,
-                    first: response.data.first,
-                    lastName: response.data.lastName,
-                    quote: response.data.quote,
-                    picture: response.data.picture,
+                    name: response.data.name,
+                    gender: response.data.gender,
+                    neuter: response.data.neuter,
+                    age: response.data.age,
+                    race: response.data.race,
                 });
             })
             .catch(error => {
@@ -59,7 +59,7 @@ class EditUser extends Component {
         event.preventDefault();
 
         // use axios to send a PUT request to the server which includes the updated state information
-        axios.put('/api/users', this.state)
+        axios.put('/api/dogs', this.state)
             //on success go to home
             .then(res => this.props.history.push('/'))
             .catch(error => {
@@ -73,7 +73,7 @@ class EditUser extends Component {
             <div className="is-fluid">
                 {/*on form submit call handleSubmit()*/}
                 <form onSubmit={this.handleSubmit}>
-                    <h2 className="title is-1 has-text-primary">Edit User</h2>
+                    <h2 className="title is-1 has-text-primary">Edit Dog</h2>
                     <hr />
                     {/*main container for input fields*/}
                     <div className="container">
@@ -81,36 +81,36 @@ class EditUser extends Component {
                         <div className="columns">
                             <div className="column is-half">
                                 <div className="field">
-                                    <label className="label"> Title: </label>
+                                    <label className="label"> Name: </label>
                                     <div className="control">
-                                        <input className="input is-small" type="text" name="title" value={this.state.title} onChange={this.handleChange} id="form" />
+                                        <input className="input is-small" type="text" name="name" value={this.state.name} onChange={this.handleChange} id="form" />
                                     </div>
                                 </div>
                                 <div className="field">
-                                    <label className="label"> First Name: </label>
+                                    <label className="label"> Gender: </label>
                                     <div className="control">
-                                        <input className="input is-small" type="text" name="first" value={this.state.first} onChange={this.handleChange} id="form" />
+                                        <input className="input is-small" type="text" name="gender" value={this.state.gender} onChange={this.handleChange} id="form" />
                                     </div>
                                 </div>
                                 <div className="field">
-                                    <label className="label"> Picture: </label>
+                                    <label className="label"> neuter: </label>
                                     <div className="control">
-                                        <input className="input is-small" type="text" name="picture" value={this.state.picture} onChange={this.handleChange} id="form" />
+                                        <input className="input is-small" type="booleam" name="neuter" value={this.state.neuter} onChange={this.handleChange} id="form" />
                                     </div>
                                 </div>
                             </div>
                             {/*SECOND COLUMN*/}
                             <div className="column">
                                 <div className="field">
-                                    <label className="label"> Last Name: </label>
+                                    <label className="label"> Age: </label>
                                     <div className="control">
-                                        <input className="input is-small" type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} id="form" />
+                                        <input className="input is-small" type="number" name="age" value={this.state.age} onChange={this.handleChange} id="form" />
                                     </div>
                                 </div>
                                 <div className="field">
-                                    <label className="label"> Quote: </label>
+                                    <label className="label"> race: </label>
                                     <div className="control">
-                                        <input className="input is-small" type="text" name="quote" value={this.state.quote} onChange={this.handleChange} id="form" />
+                                        <input className="input is-small" type="text" name="race" value={this.state.race} onChange={this.handleChange} id="form" />
                                     </div>
                                 </div>
                             </div>
@@ -124,4 +124,4 @@ class EditUser extends Component {
     }
 }
 
-export default EditUser;
+export default EditDog;
