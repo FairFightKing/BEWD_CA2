@@ -28,7 +28,7 @@ class EditDog extends Component {
   // fetch the related user data
   componentDidMount() {
     // get the users API and include the id which is passed via the URL and accessed via props
-    axios.get('/api/users/' + this.props.match.params.id)
+    axios.get('/api/dogs/' + this.props.match.params.id)
       .then(response => {
         // on resonse set the state values to match empty state values set in the constructor
         this.setState({
